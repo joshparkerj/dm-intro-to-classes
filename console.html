@@ -1,0 +1,33 @@
+<script>
+    console.log("At last! It's time to work on classes!")
+    class Burger {
+        constructor( layers ){
+            this.layers = layers;
+            this.percentLeft = 100;
+        }
+        eat(){
+            this.percentLeft--;
+        }
+    }
+    var BigMac = new Burger(2);
+    BigMac.hasSpecialSauce = true;
+    console.log(BigMac);
+    console.log("let's eat this Big Mac!");
+    while (BigMac.percentLeft > 0){
+        BigMac.eat();
+        //console.log(BigMac); // Too much eating!
+    }
+    var tripleBigBoy = new Burger(3);
+    class Tree {
+        constructor(height){
+            this.height = height;
+            this.food = 'photosynthesis'
+        }
+        grow(){
+            this.height++;
+        }
+    }
+    var oak = new Tree(10);
+    oak.grow();
+    console.log(oak);
+</script>
